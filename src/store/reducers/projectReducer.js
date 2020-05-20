@@ -1,9 +1,5 @@
 const initState = {
   projects: [
-    { id: "1", title: "help me ", content: "apiofj poij poij poijpo ij" },
-    { id: "2", title: "kill me ", content: "apiofj poij poij poijpo ij" },
-    { id: "3", title: "connect me ", content: "apiofj poij poij poijpo ij" },
-    { id: "4", title: "year me ", content: "apiofj poij poij poijpo ij" },
   ],
 };
 
@@ -18,7 +14,6 @@ const projectReducer = (state = initState, action) => {
     default:
       return state;
   }
-  return state;
 };
 
 export default projectReducer;
