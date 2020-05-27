@@ -5,17 +5,20 @@ import { signOut } from "../../store/actions/authActions";
 
 export class SignedInLinks extends Component {
   render() {
+    const { profile: {initials} } = this.props;
     return (
       <ul className="right">
         <li>
           <NavLink to="/project/create">New Project</NavLink>
         </li>
         <li>
-          <a href="#" onClick={this.props.signOut}>Log Out</a>
+          <a href="/" onClick={this.props.signOut}>
+            Log Out
+          </a>
         </li>
         <li>
           <NavLink to="/" className="btn btn-floating pink lighten-1">
-            KH
+            {initials}
           </NavLink>
         </li>
       </ul>

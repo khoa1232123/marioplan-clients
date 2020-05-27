@@ -36,7 +36,7 @@ export const signUp = (newUser) => {
     firebase.auth()
       .createUserWithEmailAndPassword(newUser.email, newUser.password)
       .then((res) => {
-        return firebase
+        return firestore
           .collection("users")
           .doc(res.user.uid)
           .set({
